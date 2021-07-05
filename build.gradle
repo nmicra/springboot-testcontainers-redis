@@ -18,7 +18,7 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-data-redis:2.3.0.RELEASE'
     implementation 'org.springframework.boot:spring-boot-starter-web:2.3.0.RELEASE'
     implementation 'org.projectlombok:lombok:1.18.12'
-    testImplementation 'org.testcontainers:testcontainers:1.14.3'
+    testImplementation 'org.testcontainers:testcontainers:1.15.3'
     testImplementation 'org.springframework.boot:spring-boot-starter-test:2.3.0.RELEASE'
 }
 
@@ -37,4 +37,8 @@ publishing {
 
 tasks.withType(JavaCompile) {
     options.encoding = 'UTF-8'
+}
+
+test {
+    useJUnitPlatform()
 }
